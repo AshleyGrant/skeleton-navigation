@@ -1,0 +1,15 @@
+<template>
+  <import from="./slave"></import>
+  <section>
+    <h2>${maintitle} - ${subtitle}</h2>
+
+    <form role="form">
+      <div class="form-group">
+        <label for="fn">VM Subtitle</label>
+        <input type="text" value.bind="subtitle" class="form-control" id="fn" placeholder="subtitle">
+      </div>
+      <slave subtitle.bind="subtitle" number="1" compare-string="foo"></slave>
+      <slave subtitle.bind="subtitle" number="2" ></slave>
+    </form>
+  </section>
+</template>
