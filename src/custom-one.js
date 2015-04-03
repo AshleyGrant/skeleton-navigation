@@ -12,6 +12,10 @@ export class CustomOne {
   }
 
   addChild() {
-    this.items.push(this.items.length);
+    let model = {
+      prop1: this.items.length
+    };
+
+    this.items.push(model);
   }
 }
