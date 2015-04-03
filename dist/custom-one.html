@@ -1,6 +1,7 @@
 <template>
-  <div>
-    Bound value is: ${value}
-  </div>
-  <button click.delegate="toggleValue()" >Toggle!</button>
+  <div>There are ${items.length} item(s).</div>
+  <button click.delegate="addChild()" >Add another!</button>
+  <template repeat.for="item of items">
+    <compose model.bind="item" view-model="custom-two" ></compose>
+  </template>
 </template>
