@@ -71,10 +71,10 @@
     "tarball": "http://registry.npmjs.org/font-awesome/-/font-awesome-4.3.0.tgz"
   },
   "jspm": {},
-  "registry": "npm",
   "format": "cjs",
   "ignore": [
     "node_modules"
   ],
+  "registry": "npm",
   "dependencies": {}
 }

@@ -82,7 +82,7 @@
   "directories": {
     "lib": "dist/system"
   },
-  "registry": "jspm",
+  "registry": "github",
   "dependencies": {
     "aurelia-history": "github:aurelia/history@^0.2.4",
     "core-js": "npm:core-js@^0.4.1"

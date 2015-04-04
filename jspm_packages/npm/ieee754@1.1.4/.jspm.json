@@ -68,10 +68,10 @@
     "tarball": "http://registry.npmjs.org/ieee754/-/ieee754-1.1.4.tgz"
   },
   "jspm": {},
-  "registry": "npm",
   "format": "cjs",
   "ignore": [
     "node_modules"
   ],
+  "registry": "npm",
   "dependencies": {}
 }

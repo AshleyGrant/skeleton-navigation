@@ -28,5 +28,6 @@
     "run-sequence": "^1.0.1",
     "web-component-tester": "*"
   },
-  "jspm": {}
+  "jspm": {},
+  "registry": "github"
 }

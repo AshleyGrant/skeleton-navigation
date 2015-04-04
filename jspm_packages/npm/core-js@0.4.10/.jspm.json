@@ -68,11 +68,11 @@
     "tarball": "http://registry.npmjs.org/core-js/-/core-js-0.4.10.tgz"
   },
   "jspm": {},
-  "registry": "npm",
   "format": "cjs",
   "ignore": [
     "node_modules"
   ],
+  "registry": "npm",
   "dependencies": {
     "process": "github:jspm/nodelibs-process@^0.1.0"
   }

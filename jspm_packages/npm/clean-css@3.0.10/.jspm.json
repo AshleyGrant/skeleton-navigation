@@ -68,11 +68,11 @@
     "tarball": "http://registry.npmjs.org/clean-css/-/clean-css-3.0.10.tgz"
   },
   "jspm": {},
-  "registry": "npm",
   "format": "cjs",
   "ignore": [
     "node_modules"
   ],
+  "registry": "npm",
   "dependencies": {
     "commander": "commander@~2.5.0",
     "source-map": "source-map@~0.1.43",
