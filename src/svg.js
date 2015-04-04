@@ -28,6 +28,6 @@ export class SVG{
           goForward = true;
         }
       }
-    }, 33);
+    }, 0);
   }
 }
