@@ -1,8 +1,8 @@
 <template>
   <div class="row">
     <section class="col-sm-3">
-      <h2>Line</h2>
-      <form role="form" >
+      <h2>Line (using style attribute)</h2>
+      <form role="form" css="border: solid red ${width}px;">
         <div class="form-group">
           <label for="x1">x1</label>
           <input type="text" value.bind="x1" class="form-control" id="x1" placeholder="x1">
@@ -25,8 +25,38 @@
           </div>
       </form>
         <svg>
-          <line x1.bind="x1" y1.bind="y1" x2.bind="x2" y2.bind="y2" style="stroke:rgb(0,0,0);stroke-width:${width}"/></line>
+          <line x1.bind="x1" y1.bind="y1" x2.bind="x2" y2.bind="y2" style="stroke:rgb(0,0,0);stroke-width:40"/></line>
         </svg>
     </section>
+  </row>
+  <row>
+      <section class="col-sm-3">
+        <h2>Line (using css attribute)</h2>
+        <form role="form" css="border: solid red ${width}px;">
+          <div class="form-group">
+            <label for="x1">x1</label>
+            <input type="text" value.bind="x1" class="form-control" id="x1" placeholder="x1">
+          </div>
+          <div class="form-group">
+            <label for="y1">y1</label>
+            <input type="text" value.bind="y1" class="form-control" id="y1" placeholder="y1">
+          </div>
+            <div class="form-group">
+              <label for="x2">x2</label>
+              <input type="text" value.bind="x2" class="form-control" id="x2" placeholder="x2">
+            </div>
+            <div class="form-group">
+              <label for="y2">y2</label>
+              <input type="text" value.bind="y2" class="form-control" id="y2" placeholder="y2">
+            </div>
+            <div class="form-group">
+              <label for="width">width</label>
+              <input type="text" value.bind="width" class="form-control" id="width" placeholder="width">
+            </div>
+        </form>
+          <svg>
+            <line x1.bind="x1" y1.bind="y1" x2.bind="x2" y2.bind="y2" css="stroke:rgb(0,0,0);stroke-width:40"/></line>
+          </svg>
+      </section>
   </row>
 </template>
