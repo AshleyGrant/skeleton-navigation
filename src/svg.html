@@ -25,7 +25,10 @@
           </div>
       </form>
         <svg>
-          <line x1.bind="x1" y1.bind="y1" x2.bind="x2" y2.bind="y2" style="stroke:rgb(0,0,0);stroke-width:${width}"/></line>
+          <line x1.bind="x1" y1.bind="y1" x2.bind="x2" y2.bind="y2" style="stroke:red;stroke-width:${width}"/></line>
+        </svg>
+        <svg>
+          <line x1.bind="x1" y1.bind="y1" x2.bind="x2" y2.bind="y2" style="stroke:blue;stroke-width:40"/></line>
         </svg>
     </section>
   </row>
@@ -54,9 +57,12 @@
               <input type="text" value.bind="width" class="form-control" id="width" placeholder="width">
             </div>
         </form>
-          <svg>
-            <line x1.bind="x1" y1.bind="y1" x2.bind="x2" y2.bind="y2" css="stroke:rgb(0,0,0);stroke-width:${width}"/></line>
-          </svg>
+        <svg>
+          <line x1.bind="x1" y1.bind="y1" x2.bind="x2" y2.bind="y2" css="stroke:red;stroke-width:${width}"/></line>
+        </svg>
+        <svg>
+          <line x1.bind="x1" y1.bind="y1" x2.bind="x2" y2.bind="y2" css="stroke:blue;stroke-width:40"/></line>
+        </svg>
       </section>
   </row>
 </template>
