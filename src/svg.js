@@ -7,15 +7,27 @@ export class SVG{
     this.width = 40;
     this.style = 'stroke:rgb(0,0,0);stroke-width:${width}';
 
+    let goForward = true;
+
     setInterval(() => {
-      if(this.x1 < 250) {
-        this.x1++;
-        this.x2++;
+      if(goForward === true) {
+        if(this.x1 < 250) {
+          this.x1++;
+          this.x2++;
+        }
+        else {
+          goForward = false;
+        }
       }
       else {
-        this.x1 = 0;
-        this.x2 = 50;
+        if( this.x1 > 0 ) {
+          this.x1--;
+          this.x2--;
+        }
+        else {
+          goForward = true;
+        }
       }
-    }, 33);
+    }, 0);
   }
 }
