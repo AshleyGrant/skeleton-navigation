@@ -1,6 +1,6 @@
 /* */ 
 (function(process) {
-  var B = require("../../buffer@3.0.3").Buffer;
+  var B = require("../index").Buffer;
   var test = require("tape");
   var isnan = require("is-nan");
   if (process.env.OBJECT_IMPL)

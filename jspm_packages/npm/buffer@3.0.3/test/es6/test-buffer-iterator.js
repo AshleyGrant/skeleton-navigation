@@ -1,6 +1,6 @@
 /* */ 
 (function(process) {
-  var Buffer = require("../../../buffer@3.0.3").Buffer;
+  var Buffer = require("../../index").Buffer;
   if (process.env.OBJECT_IMPL)
     return ;
   var assert = require("assert");
