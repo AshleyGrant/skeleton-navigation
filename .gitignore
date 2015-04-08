@@ -1,5 +1,16 @@
 node_modules
-jspm_packages
+build
+doc
+test
 bower_components
 .idea
 .DS_STORE
+.editorconfig
+.jshintrc
+.npmignore
+aurelia.progractor.js
+CONTRIBUTING.md
+gulpfile.js
+karma.conf.js
+protractor.conf.js
+README.md
