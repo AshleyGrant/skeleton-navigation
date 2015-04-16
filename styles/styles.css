@@ -45,6 +45,10 @@ section {
     max-width: 425px;
 }
 
+.highlight-yellow {
+  background: rgb(255,250,205);
+}
+
 /* animate page transitions */
 section.au-enter-active {
   -webkit-animation: fadeInRight 1s;

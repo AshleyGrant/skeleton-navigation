@@ -16,6 +16,13 @@ export class Welcome{
   welcome(){
     alert(`Welcome, ${this.fullName}!`);
   }
+
+  get changeColor(){
+  if (this.firstName === 'John'){
+    return false;
+  }
+  return true;
+ }
 }
 
 export class UpperValueConverter {

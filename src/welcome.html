@@ -1,9 +1,11 @@
 <template>
+  <require from="./highlightattribute"></require>
+
   <section class="au-animate">
     <h2>${heading}</h2>
 
     <form role="form" submit.delegate="welcome()">
-      <div class="form-group">
+      <div class="form-group" high.bind="changeColor">
         <label for="fn">First Name</label>
         <input type="text" value.bind="firstName" class="form-control" id="fn" placeholder="first name">
       </div>
