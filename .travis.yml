@@ -9,8 +9,7 @@ before_install:
 - jspm config registries.github.auth $GH_TOKEN
 - jspm install
 script:
-- gulp build
-- ./node_modules/karma/bin/karma start --browsers Firefox --single-run
+- gulp test-ci
 notifications:
   webhooks:
     urls:
