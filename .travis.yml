@@ -15,6 +15,10 @@ notifications:
   webhooks:
     urls:
     - https://webhooks.gitter.im/e/a6356de6d62829ab719a
+addons:
+  sauce_connect: true
 env:
   global:
-    secure: PGsEN8Dm6KKN+tXLLM9OrZp8IuceXrX+xY30hTH/4GSzQcNicBvBXIjbc1nIktFAJ0Lzu14aw4WotWNDQXgdr6e+Soi6COsvXVGJFak9wAE6fuM6k5z3NwQRtrxRftd93i/pP3TbSpoPuSZGR7YM6wgJTseh7cOTwPlEnc7/ESA=
+    - secure: PGsEN8Dm6KKN+tXLLM9OrZp8IuceXrX+xY30hTH/4GSzQcNicBvBXIjbc1nIktFAJ0Lzu14aw4WotWNDQXgdr6e+Soi6COsvXVGJFak9wAE6fuM6k5z3NwQRtrxRftd93i/pP3TbSpoPuSZGR7YM6wgJTseh7cOTwPlEnc7/ESA=
+    - secure: dNxtrqST/1yraZWClnRudIwVLnnPZJ+RPUlQTOOfrTCCWPzdPBx5GgW3BEVi/zLn3rNP54wh57o5SJeoLocVD4CaxTSafdqMQuSG9d+rFINFaHwcFx5c+g4fK0JkphWZtct5mWs/Eyj41/rcGKNJntrnWLztJnPTUTcvHBbsdlU=
+    - secure: AtdDlQDG2CYd/U9T16tpTdTi2lvcGCIA+3H9QVrRCAcOvCdwSfXG16PvFjHCuSvhBT2lVX8/Vare3nOFo+IRFBaHVOWQ1ZDTiWp2cojby+Q70IcNhE3u9oZUvEANHRxn0kAZU89SsnXYp/7z/gOvbnTzEtHhOvgeVGN4brx+wjY=
