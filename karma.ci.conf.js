@@ -95,6 +95,7 @@ module.exports = function(config) {
     // enable / disable watching file and executing tests whenever any file changes
     sauceLabs: {
       testName: 'Aurelia Skeleton Navigation Tests',
+      tunnelIdentifier: tunnelIdentifier,
       // startConnect: false
     },
 
