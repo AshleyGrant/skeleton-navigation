@@ -23,6 +23,8 @@ if (process.env.TRAVIS_BUILD_NUMBER) {
   config.sauceKey = process.env.SAUCE_ACCESS_KEY;
   config.seleniumAddress = 'http://localhost:4445/wd/hub';
   config.capabilities = {
+    'username': process.env.SAUCE_USERNAME,
+    'accessKey': process.env.SAUCE_ACCESS_KEY,
     'browserName': 'chrome',
     'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
     'build': "TRAVIS #" + process.env.TRAVIS_BUILD_NUMBER + " (" + process.env.TRAVIS_BUILD_ID + ")",
