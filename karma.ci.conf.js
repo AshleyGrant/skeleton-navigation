@@ -19,16 +19,56 @@ module.exports = function(config) {
 
 
   // Browsers to run on Sauce Labs
-   var customLaunchers = {
-     'SL_Chrome': {
-       base: 'SauceLabs',
-       browserName: 'chrome'
-     },
-    //  'SL_Firefox': {
-    //    base: 'SauceLabs',
-    //    browserName: 'firefox',
-    //  }
-   };
+  var customLaunchers = {
+    "SL_Chrome": {
+      base: "SauceLabs",
+      browserName: "Chrome",
+      platform: "Windows 8.1"
+    },
+    "SL_Chrome_Linux": {
+      base: "SauceLabs",
+      browserName: "Chrome",
+      platform: "Linux"
+    },
+    "SL_Chrome_OSX": {
+      base: "SauceLabs",
+      browserName: "Chrome",
+      platform: "OS X 10.10"
+    },
+    "SL_Firefox": {
+      base: "SauceLabs",
+      browserName: "Firefox",
+      platform: "Windows 8.1"
+    },
+    "SL_Firefox_Linux": {
+      base: "SauceLabs",
+      browserName: "Firefox",
+      platform: "Linux"
+    },
+    "SL_Firefox_OSX": {
+      base: "SauceLabs",
+      browserName: "Firefox",
+      platform: "OS X 10.10"
+    },
+    "SL_IE_9": {
+      base: "SauceLabs",
+      browserName: "Internet Explorer",
+      platform: "Windows 7",
+      version: "9"
+    },
+    "SL_IE_10": {
+      base: "SauceLabs",
+      browserName: "Internet Explorer",
+      platform: "Windows 8",
+      version: "10"
+    },
+    "SL_IE_11": {
+      base: "SauceLabs",
+      browserName: "Internet Explorer",
+      platform: "Windows 8.1",
+      version: "11"
+    },
+  };
 
   config.set({
     // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -115,18 +155,18 @@ module.exports = function(config) {
   });
 
   if (process.env.TRAVIS)    {
-        label = "TRAVIS #" + process.env.TRAVIS_BUILD_NUMBER + " (" + process.env.TRAVIS_BUILD_ID + ")";
+    label = "TRAVIS #" + process.env.TRAVIS_BUILD_NUMBER + " (" + process.env.TRAVIS_BUILD_ID + ")";
 
-        config.captureTimeout = 0;
-        // config.logLevel = config.LOG_DEBUG;
-        config.transports = [
-            "websocket"
-        ];
+    config.captureTimeout = 0;
+    // config.logLevel = config.LOG_DEBUG;
+    config.transports = [
+      "websocket"
+    ];
 
-        config.sauceLabs.build = label;
-        config.sauceLabs.startConnect = false;
-        config.sauceLabs.recordScreenshots = true;
-        config.sauceLabs.tunnelIdentifier = process.env.TRAVIS_JOB_NUMBER;
-        config.sauceLabs.testName = "Travis-CI";
-    }
+    config.sauceLabs.build = label;
+    config.sauceLabs.startConnect = false;
+    config.sauceLabs.recordScreenshots = true;
+    config.sauceLabs.tunnelIdentifier = process.env.TRAVIS_JOB_NUMBER;
+    config.sauceLabs.testName = "Travis-CI";
+  }
 };
