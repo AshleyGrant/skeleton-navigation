@@ -1,6 +1,7 @@
 // Karma configuration for Travis-CI/Open Sauce
 var fs = require('fs');
 
+
 module.exports = function(config) {
   // Use ENV vars on Travis and sauce.json locally to get credentials
   if (!process.env.SAUCE_USERNAME) {
@@ -12,6 +13,9 @@ module.exports = function(config) {
       process.env.SAUCE_ACCESS_KEY = require('./sauce').accessKey;
     }
   }
+
+  var tunnelIdentifier = process.env.TRAVIS_JOB_NUMBER;
+
 
   // Browsers to run on Sauce Labs
    var customLaunchers = {
