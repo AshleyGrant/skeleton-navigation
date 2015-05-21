@@ -18,7 +18,8 @@ gulp.task('run-ci', function(callback) {
 
 gulp.task('start-connect', function() {
   connect.server({
-    port: 9000
+    port: 9000,
+    root: '.'
   });
 });
 
