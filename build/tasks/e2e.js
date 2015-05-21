@@ -31,3 +31,15 @@ gulp.task('e2e', ['webdriver_update', 'build-e2e'], function(cb) {
     }))
     .on('error', function(e) { throw e; });
 });
+
+// runs build-e2e task
+// then runs end to end tasks
+// using Protractor: http://angular.github.io/protractor/
+gulp.task('e2e-ci', ['webdriver_update', 'build-e2e'], function(cb) {
+  return gulp.src(paths.e2eSpecsDist + "/*.js")
+    .pipe(protractor({
+        configFile: "protractor.ci.conf.js",
+        // args: ['--baseUrl', 'http://127.0.0.1:9000']
+    }))
+    .on('error', function(e) { throw e; });
+});
