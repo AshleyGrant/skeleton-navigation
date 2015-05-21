@@ -56,6 +56,12 @@ module.exports = function(config) {
       platform: "Linux",
       version: "5.0"
     },
+    "SL_Android_5.1": {
+      base: "SauceLabs",
+      browserName: "Android",
+      platform: "Linux",
+      version: "5.1"
+    },
     "SL_Chrome": {
       base: "SauceLabs",
       browserName: "Chrome",
