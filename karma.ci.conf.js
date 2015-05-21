@@ -1,18 +1,30 @@
 // Karma configuration for Travis-CI/Open Sauce
-
-// Browsers to run on Sauce Labs
- var customLaunchers = {
-   'SL_Chrome': {
-     base: 'SauceLabs',
-     browserName: 'chrome'
-   },
-   'SL_Firefox': {
-     base: 'SauceLabs',
-     browserName: 'firefox',
-   }
- };
+var fs = require('fs');
 
 module.exports = function(config) {
+  // Use ENV vars on Travis and sauce.json locally to get credentials
+  if (!process.env.SAUCE_USERNAME) {
+    if (!fs.existsSync('sauce.json')) {
+      console.log('Create a sauce.json with your credentials based on the sauce-sample.json file.');
+      process.exit(1);
+    } else {
+      process.env.SAUCE_USERNAME = require('./sauce').username;
+      process.env.SAUCE_ACCESS_KEY = require('./sauce').accessKey;
+    }
+  }
+
+  // Browsers to run on Sauce Labs
+   var customLaunchers = {
+    //  'SL_Chrome': {
+    //    base: 'SauceLabs',
+    //    browserName: 'chrome'
+    //  },
+     'SL_Firefox': {
+       base: 'SauceLabs',
+       browserName: 'firefox',
+     }
+   };
+
   config.set({
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
@@ -39,7 +51,6 @@ module.exports = function(config) {
     exclude: [
     ],
 
-
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
@@ -61,7 +72,7 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress', 'dots', 'saucelabs'],
+    reporters: ['dots', 'saucelabs'],
 
 
     // web server port
@@ -78,10 +89,8 @@ module.exports = function(config) {
 
 
     // enable / disable watching file and executing tests whenever any file changes
-    autoWatch: true,
-
     sauceLabs: {
-      testName: 'Karma and Sauce Labs demo'
+      testName: 'Aurelia Skeleton Navigation Tests'
     },
 
     captureTimeout: 120000,
