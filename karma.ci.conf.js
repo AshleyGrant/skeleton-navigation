@@ -118,7 +118,7 @@ module.exports = function(config) {
         label = "TRAVIS #" + process.env.TRAVIS_BUILD_NUMBER + " (" + process.env.TRAVIS_BUILD_ID + ")";
 
         config.captureTimeout = 0;
-        config.logLevel = config.LOG_DEBUG;
+        // config.logLevel = config.LOG_DEBUG;
         config.transports = [
             "websocket"
         ];
@@ -127,5 +127,6 @@ module.exports = function(config) {
         config.sauceLabs.startConnect = false;
         config.sauceLabs.recordScreenshots = true;
         config.sauceLabs.tunnelIdentifier = process.env.TRAVIS_JOB_NUMBER;
+        config.sauceLabs.testName = "Travis-CI";
     }
 };
