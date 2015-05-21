@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var connect = require('gulp-connect');
 var runSequence = require('run-sequence');
 
 // this task calls the clean task (located
@@ -8,7 +9,19 @@ var runSequence = require('run-sequence');
 gulp.task('run-ci', function(callback) {
   return runSequence(
     // 'test-ci',
-    ['watch', 'e2e-ci'],
+    'start-connect',
+    'e2e-ci',
+    'stop-connect',
     callback
   );
+});
+
+gulp.task('start-connect', function() {
+  connect.server({
+    port: 9000
+  });
+});
+
+gulp.task('stop-connect', function() {
+  connect.serverClose();
 });

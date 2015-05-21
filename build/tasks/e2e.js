@@ -1,8 +1,8 @@
 var gulp = require('gulp');
+var connect = require('gulp-connect');
 var paths = require('../paths');
 var to5 = require('gulp-babel');
 var plumber = require('gulp-plumber');
-var gulp = require('gulp');
 var webdriver_update = require('gulp-protractor').webdriver_update;
 var protractor = require("gulp-protractor").protractor;
 
@@ -35,7 +35,7 @@ gulp.task('e2e', ['webdriver_update', 'build-e2e'], function(cb) {
 // runs build-e2e task
 // then runs end to end tasks
 // using Protractor: http://angular.github.io/protractor/
-gulp.task('e2e-ci', ['webdriver_update', 'build-e2e', 'serve'], function(cb) {
+gulp.task('e2e-ci', ['webdriver_update', 'build-e2e', 'build'], function(cb) {
   return gulp.src(paths.e2eSpecsDist + "/*.js")
     .pipe(protractor({
         configFile: "protractor.ci.conf.js",
