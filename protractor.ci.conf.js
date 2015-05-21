@@ -1,6 +1,6 @@
 // An example configuration file for using travis-ci and SauceLabs for continuous integration
 var config = {
-  baseUrl: 'http://skeleton-navigation:9000'
+  baseUrl: 'http://skeleton-navigation:9000',
   //seleniumAddress: 'http://0.0.0.0:4444',
   // add proper version number
   seleniumServerJar: './node_modules/gulp-protractor/node_modules/protractor/selenium/selenium-server-standalone-2.44.0.jar',
