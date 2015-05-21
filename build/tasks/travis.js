@@ -7,7 +7,7 @@ var runSequence = require('run-sequence');
 // https://www.npmjs.com/package/gulp-run-sequence
 gulp.task('run-ci', function(callback) {
   return runSequence(
-    'test-ci',
+    // 'test-ci',
     'e2e-ci',
     callback
   );
