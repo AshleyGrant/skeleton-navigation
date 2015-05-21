@@ -1,5 +1,6 @@
 // Karma configuration for Travis-CI/Open Sauce
 var fs = require('fs');
+var label;
 
 
 module.exports = function(config) {
@@ -95,7 +96,6 @@ module.exports = function(config) {
     // enable / disable watching file and executing tests whenever any file changes
     sauceLabs: {
       testName: 'Aurelia Skeleton Navigation Tests',
-      tunnelIdentifier: process.env.TRAVIS_JOB_NUMBER,
       // startConnect: false
     },
 
@@ -113,4 +113,19 @@ module.exports = function(config) {
     // if true, Karma captures browsers, runs the tests and exits
     singleRun: true
   });
+
+  if (process.env.TRAVIS)    {
+        label = "TRAVIS #" + process.env.TRAVIS_BUILD_NUMBER + " (" + process.env.TRAVIS_BUILD_ID + ")";
+
+        config.captureTimeout = 0;
+        config.logLevel = config.LOG_DEBUG;
+        config.transports = [
+            "websocket"
+        ];
+
+        config.sauceLabs.build = label;
+        config.sauceLabs.startConnect = false;
+        config.sauceLabs.recordScreenshots = true;
+        config.sauceLabs.tunnelIdentifier = process.env.TRAVIS_JOB_NUMBER;
+    }
 };
