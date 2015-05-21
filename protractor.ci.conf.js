@@ -10,7 +10,7 @@ var config = {
     path: 'aurelia.protractor.js'
   }],
 
-
+  allScriptsTimeout: 60000,
   // Options to be passed to Jasmine-node.
   jasmineNodeOpts: {
     showColors: true,
