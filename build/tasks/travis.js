@@ -8,7 +8,7 @@ var runSequence = require('run-sequence');
 gulp.task('run-ci', function(callback) {
   return runSequence(
     // 'test-ci',
-    'e2e-ci',
+    ['watch', 'e2e-ci'],
     callback
   );
 });
