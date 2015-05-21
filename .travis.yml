@@ -6,11 +6,10 @@ before_install:
 - sh -e /etc/init.d/xvfb start
 - npm install -g gulp
 - npm install -g jspm
-- npm install -g karma-cli
 - jspm config registries.github.auth $GH_TOKEN
 - jspm install
 script:
-- karma start karma.ci.conf.js
+- gulp test-ci
 notifications:
   webhooks:
     urls:
