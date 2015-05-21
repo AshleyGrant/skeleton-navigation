@@ -20,7 +20,7 @@
   },
   "scripts": {
     "test": "gulp run-ci"
-  }
+  },
   "devDependencies": {
     "aurelia-tools": "^0.1.3",
     "browser-sync": "^1.8.1",
