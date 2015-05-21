@@ -39,7 +39,7 @@ gulp.task('e2e-ci', ['webdriver_update', 'build-e2e', 'build'], function(cb) {
   return gulp.src(paths.e2eSpecsDist + "/*.js")
     .pipe(protractor({
         configFile: "protractor.ci.conf.js",
-        args: ['--baseUrl', 'http://localhost:9000']
+        // args: ['--baseUrl', 'http://localhost:9000']
     }))
     .on('error', function(e) { throw e; });
 });
