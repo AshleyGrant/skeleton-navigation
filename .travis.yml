@@ -9,7 +9,7 @@ before_install:
 - jspm config registries.github.auth $GH_TOKEN
 - jspm install
 script:
-- gulp test-ci
+- karma start karma.ci.conf.js
 notifications:
   webhooks:
     urls:
