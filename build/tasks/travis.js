@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var runSequence = require('run-sequence');
 
 // this task calls the clean task (located
 // in ./clean.js), then runs the build-system
