@@ -15,14 +15,14 @@ module.exports = function(config) {
 
   // Browsers to run on Sauce Labs
    var customLaunchers = {
-    //  'SL_Chrome': {
-    //    base: 'SauceLabs',
-    //    browserName: 'chrome'
-    //  },
-     'SL_Firefox': {
+     'SL_Chrome': {
        base: 'SauceLabs',
-       browserName: 'firefox',
-     }
+       browserName: 'chrome'
+     },
+    //  'SL_Firefox': {
+    //    base: 'SauceLabs',
+    //    browserName: 'firefox',
+    //  }
    };
 
   config.set({
@@ -37,11 +37,11 @@ module.exports = function(config) {
     jspm: {
       // Edit this to your needs
       loadFiles: ['src/**/*.js', 'test/unit/**/*.js'],
+      serveFiles: ['src/**/*.js', 'test/unit/**/*.js'],
       paths: {
         '*': '*.js'
       }
     },
-
 
     // list of files / patterns to load in the browser
     files: [],
@@ -90,10 +90,12 @@ module.exports = function(config) {
 
     // enable / disable watching file and executing tests whenever any file changes
     sauceLabs: {
-      testName: 'Aurelia Skeleton Navigation Tests'
+      testName: 'Aurelia Skeleton Navigation Tests',
+      // startConnect: false
     },
 
     captureTimeout: 120000,
+    browserNoActivityTimeout: 0,
 
     customLaunchers: customLaunchers,
 
