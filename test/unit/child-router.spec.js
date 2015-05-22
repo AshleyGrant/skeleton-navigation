@@ -10,12 +10,17 @@ class RouterStub {
 }
 
 describe('the Child Router module', () => {
-  var sut;
-  beforeEach(() => { sut = new ChildRouter(new RouterStub()); });
+  var sut
+    , mockedRouter;
+
+  beforeEach(() => {
+    mockedRouter = new RouterStub();
+    sut = new ChildRouter(mockedRouter);
+    sut.configureRouter(mockedRouter, mockedRouter);
+  });
 
   it('contains a router property', () => {
     expect(sut.router).toBeDefined();
-    console.log(sut.router.routes);
   });
 
   it('configures the heading', () => {
@@ -27,7 +32,7 @@ describe('the Child Router module', () => {
   });
 
   it('should have a flickr route', () => {
-     expect(sut.router.routes).toContain({ route: 'flickr', moduleId: './flickr', nav: true });
+     expect(sut.router.routes).toContain({ route: 'flickr', moduleId: './flickr', nav: true, title:'Flickr' });
   });
 
   it('should have a child router route', () => {
