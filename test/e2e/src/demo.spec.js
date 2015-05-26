@@ -10,6 +10,7 @@ describe('aurelia skeleton app', function() {
     po_welcome = new PageObject_Welcome();
 
     browser.loadAndWaitForAureliaPage("http://localhost:9000");
+    browser.sleep(4000);
   });
 
   it('should load the page and display the initial page title', () => {
@@ -26,7 +27,6 @@ describe('aurelia skeleton app', function() {
 
     // For now there is a timing issue with the binding.
     // Until resolved we will use a short sleep to overcome the issue.
-    browser.sleep(200);
     expect(po_welcome.getFullname()).toBe('ROB EISENBERG');
   });
 
@@ -36,6 +36,7 @@ describe('aurelia skeleton app', function() {
 
   it('should navigate to flickr page', () => {
     po_skeleton.navigateTo('#/flickr');
+    browser.sleep(4000);
     expect(po_skeleton.getCurrentPageTitle()).toBe('Flickr | Aurelia');
   });
 });

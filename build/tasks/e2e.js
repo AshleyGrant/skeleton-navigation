@@ -23,7 +23,7 @@ gulp.task('build-e2e', function () {
 // runs build-e2e task
 // then runs end to end tasks
 // using Protractor: http://angular.github.io/protractor/
-gulp.task('e2e', ['webdriver_update', 'build-e2e'], function(cb) {
+gulp.task('e2e', ['build-e2e'], function(cb) {
   return gulp.src(paths.e2eSpecsDist + "/*.js")
     .pipe(protractor({
         configFile: "protractor.conf.js",
@@ -33,9 +33,9 @@ gulp.task('e2e', ['webdriver_update', 'build-e2e'], function(cb) {
 });
 
 // runs build-e2e task
-// then runs end to end tasks
+// then runs end to end tasks for Continuous Integration
 // using Protractor: http://angular.github.io/protractor/
-gulp.task('e2e-ci', ['build-e2e', 'build'], function(cb) {
+gulp.task('e2e-ci', ['build-e2e'], function(cb) {
   return gulp.src(paths.e2eSpecsDist + "/*.js")
     .pipe(protractor({
         configFile: "protractor.ci.conf.js",
