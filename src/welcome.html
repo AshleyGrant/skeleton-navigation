@@ -3,11 +3,12 @@
     <h2>${heading}</h2>
 
     <form role="form" submit.delegate="submit()">
-      <div class="form-group">
+      <div class="form-group" css.bind="firstNameStyle">
         <label for="fn">First Name</label>
         <input type="text" value.bind="firstName" class="form-control" id="fn" placeholder="first name">
+        <input type="checkbox" checked.bind="dashedChecked" />
       </div>
-      <div class="form-group">
+      <div class="form-group" css.bind="lastNameStyle">
         <label for="ln">Last Name</label>
         <input type="text" value.bind="lastName" class="form-control" id="ln" placeholder="last name">
       </div>
