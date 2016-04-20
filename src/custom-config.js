@@ -4,7 +4,7 @@ import {inject, dynamicOptions} from 'aurelia-framework';
 @inject(Element)
 export class CustomConfigCustomAttribute {
   constructor(element) {
-    if( typeof(element.au.controller) == "object") {
+    if( typeof(element.au.controller) === "object" && typeof(element.au.controller.viewModel) === "object") {
       this.isCustomElement = true;
       this.elementVM = element.au.controller.viewModel;
     }
