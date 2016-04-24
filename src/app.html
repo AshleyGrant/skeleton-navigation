@@ -1,10 +1,13 @@
 <template>
   <require from="custom-config"></require>
-  <require from="say-hello"></require>
+  <require from="say-hello-one" as="foo"></require>
+  <require from="say-hello-two" as="bar"></require>
 
   <div class="page-host">
-    <say-hello first-name="Ashley" last-name="Grant"></say-hello>
-    <say-hello custom-config="firstName.bind: fn; lastName.bind: ln"></say-hello>
+    <!--<say-hello first-name="Ashley" last-name="Grant"></say-hello>-->
+    <!--<foo custom-config="firstName.bind: fn; lastName.bind: ln">
+    </foo>-->
+
     <div custom-config="style: border: solid 1px red;">
       Hello
     </div>
