@@ -86,6 +86,11 @@
       "jquery": "npm:jquery@^2.2.4",
       "text": "github:systemjs/plugin-text@^0.0.8"
     },
-    "devDependencies": {}
+    "devDependencies": {},
+    "overrides": {
+      "npm:jquery@2.2.4": {
+        "format": "global"
+      }
+    }
   }
 }
