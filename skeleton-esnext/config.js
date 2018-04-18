@@ -21,10 +21,10 @@ System.config({
     "aurelia-templating-resources": "npm:aurelia-templating-resources@1.1.1",
     "aurelia-templating-router": "npm:aurelia-templating-router@1.0.0",
     "bluebird": "npm:bluebird@3.4.1",
-    "bootstrap": "github:twbs/bootstrap@3.3.7",
+    "bootstrap": "npm:bootstrap@4.1.0",
     "fetch": "github:github/fetch@1.0.0",
     "font-awesome": "npm:font-awesome@4.6.3",
-    "jquery": "npm:jquery@2.2.4",
+    "jquery": "npm:jquery@3.3.1",
     "text": "github:systemjs/plugin-text@0.0.8",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.4.1"
@@ -40,9 +40,6 @@ System.config({
     },
     "github:jspm/nodelibs-vm@0.1.0": {
       "vm-browserify": "npm:vm-browserify@0.0.4"
-    },
-    "github:twbs/bootstrap@3.3.7": {
-      "jquery": "npm:jquery@2.2.4"
     },
     "npm:assert@1.4.1": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",
@@ -171,6 +168,10 @@ System.config({
     },
     "npm:bluebird@3.4.1": {
       "process": "github:jspm/nodelibs-process@0.1.2"
+    },
+    "npm:bootstrap@4.1.0": {
+      "jquery": "npm:jquery@3.3.1",
+      "tether": "github:HubSpot/tether@1.4.4"
     },
     "npm:buffer@3.6.0": {
       "base64-js": "npm:base64-js@0.0.8",
